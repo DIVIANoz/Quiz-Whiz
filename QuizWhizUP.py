@@ -34,7 +34,7 @@ quiz_data = {
     }
         
 }
-
+#start
 def main_menu():
     print("Welcome to Quiz Whiz!")
     print("1) Start Quiz")
@@ -42,7 +42,7 @@ def main_menu():
     choice = input("Choose only [1, 2]: ")
     return choice
 
-# Function to select subject
+#select subject
 def select_subject():
     print("Select Subject:")
     for i, subject in enumerate(quiz_data.keys(), 1):
@@ -56,7 +56,7 @@ def select_subject():
         print("Invalid choice.")
         return None
 
-# Function to display the difficulty selection menu
+#difficulty selection
 def select_difficulty():
     print("Select Difficulty Level")
     print("Each Difficulty have Points, GOOD LUCK TO YOUR QUIZ!!")
