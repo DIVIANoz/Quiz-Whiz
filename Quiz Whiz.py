@@ -31,6 +31,10 @@ quiz_data = {
             {"question": "Which of the following statements about metaclasses in Python is true?", "choices": ["A) Metaclasses only apply to Python built-in classes", "B) Metaclasses are used to define the behavior and structure of class instances", "C) Metaclasses are classes of classes that control the creation and behavior of classes", "D) Metaclasses cannot be inherited"], "answer": "C"}            
             
         ]
+    },   
+    "Math":{
+    },
+    "science":{
     }
         
 }
@@ -47,7 +51,7 @@ def select_subject():
     print("Select Subject:")
     for i, subject in enumerate(quiz_data.keys(), 1):
         print(f"{i}) {subject}")
-    subject_choice = input("Choose Only [1, 2]: ")
+    subject_choice = input("Choose Only [1, 2, 3]: ")
     
     subject_list = list(quiz_data.keys())
     if subject_choice.isdigit() and 1 <= int(subject_choice) <= len(subject_list):
@@ -122,14 +126,16 @@ while True:
             
         else:
             score = start_quiz(questions)
-            print(f"\nYour final score is: {score}/")
+            print(f"\nYour final score is: {score}")
                         
             if difficulty == "Easy" and score > 50:
                 print("GOOD JOB!!!")
             elif difficulty == "Medium" and score > 50:                
-                print("Quite Good!")
+                print("AMIZING!")
             elif difficulty == "Hard" and score > 50:
-                 print("po")                                                                                                                                                                                         
+                 print("GOOD JOB!!")
+            else:
+                print("BETTER LUCK NEXT TIME!!!")                                                                                                                      
             replay = input("Do you want to play again? (yes/no): ").lower()
             if replay != "yes":
                 print("Thanks for playing Quiz Whiz!")
